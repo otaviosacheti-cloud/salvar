@@ -83,13 +83,23 @@ height: 80px;
             font-weight: bold;
         }
 
+        .btn-tema-escuro {
+position: fixed;
+bottom: 16px;
+right: 16px;
+font-size: 32px;
+padding: 12px;
+background-color: var(--cor-primaria);
+border-radius: 50%;
+            }
+
 
         </style>
 
 
     </head>
 
-    <body class="tema-escuro">
+    <body>
         <header>
         <h1>Meu blog de chuteiras</h1>
         <p>Vou compartilhar meus conhecimentos sobres tenis de futsal</p> 
@@ -149,7 +159,7 @@ height: 80px;
 
             </article>
 
-           
+           <button class="btn-tema-escuro">🌘</button>
 
         </main>
        </body>
@@ -185,6 +195,18 @@ curtiu = true;
             }
         })
 
+        const btnTemaEscuro = document.querySelectorAll(".btn=tema-escuro");
+
+         btnTemaEscuro.addEventListener("click", mudaTema);
+
+function mudaTema() {
+    const corpoPagina = document.body;
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
+}
 
        </script>
  </html>
